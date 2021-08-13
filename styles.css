@@ -1,0 +1,146 @@
+
+:root {
+    --color-text: hsl(0, 0%, 100%);
+    --bg-body: hsl(235, 16%, 14%);
+    --bg-div: hsl(236, 21%, 26%);
+    --shadow-border:  hsl(234, 17%, 12%);
+    --color-number: hsl(345, 95%, 68%);
+    --color-text-data: hsl(237, 18%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url("images/bg-stars.svg") repeat, hsl(235, 16%, 14%);
+}
+
+header h2 {
+    overflow: hidden;
+    font-family: 'Red Hat Text', sans-serif;
+    font-weight: 700;
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container .square {
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.container .square p {
+    color: var(--color-text-data);
+    font-family: 'Red Hat Text', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+
+.container .time {
+    width: 100px;
+    height: 100px;
+    /* background: var(--bg-div); */
+    background: linear-gradient(180deg, hsl(235, 16%, 14%), hsl(236, 21%, 26%));
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    /* border-bottom: 7px solid var(--shadow-border); */
+    box-shadow: 0 7px var(--shadow-border);
+}
+
+.container .time p {
+    font-family: 'Red Hat Text', sans-serif;
+    
+    font-size: 3rem;
+    color: var( --color-number);
+}
+
+
+footer {
+    display: flex;
+    background: url("images/pattern-hills.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 150px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 150px;    
+}
+
+footer section {
+    width: 100%;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+footer li {
+    cursor: pointer;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+footer li svg:hover path {
+    fill:  hsl(345, 95%, 68%);
+}
+
+
+@media(max-width: 690px){
+    header h2 {
+        padding: 0 20px;
+        word-break: keep-all;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .square:nth-child(4) {
+        margin-right: 0;
+    }
+
+    .container .square {
+        width: 16%;
+        margin-right: 25px;
+    }
+
+    .square .time {
+        width: 100%;
+    }
+
+    .square .time .data-time {
+        font-size: 2.3rem;
+        
+    }
+    .square .time .data-time p {
+        font-family: 'Red Hat Text', sans-serif;
+    }
+
+
+}
